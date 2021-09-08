@@ -68,7 +68,7 @@ namespace Trackers
                 var xkey = "bt-tracker-scheduler";
                 x.SchedulerId = xkey;
                 x.UseInMemoryStore();
-                x.UseMicrosoftDependencyInjectionScopedJobFactory();
+                x.UseMicrosoftDependencyInjectionJobFactory();
                 x.UseSimpleTypeLoader();
                 x.UseDefaultThreadPool(w => { w.MaxConcurrency = 10; });
                 var id = Guid.NewGuid().ToString("N");
